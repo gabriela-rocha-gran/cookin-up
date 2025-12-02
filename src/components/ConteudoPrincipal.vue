@@ -20,15 +20,27 @@ export default {
 <template>
   <main class="conteudo-principal">
     <section>
-      <span class="subtitulo-lg sua-lista-texto"
-        >Sua lista de ingredientes Sua lista:
-      </span>
+      <span class="subtitulo-lg sua-lista-texto">Sua lista: </span>
 
-      <ul class="ingredientes-sua-lista">
-        <li v-for="ingrediente in ingredientes" :key="ingrediente" class="ingrediente">
+      <ul v-if="ingredientes.length > 0" class="ingredientes-sua-lista">
+        <li
+          v-for="ingrediente in ingredientes"
+          :key="ingrediente"
+          class="ingrediente"
+        >
           {{ ingrediente }}
         </li>
       </ul>
+
+      <p v-else="ingredientes.length === 0" class="paragrafo lista-vazia">
+        <img
+          src="../assets/imagens/icones/lista-vazia.svg"
+          alt="Ícone de lista vazia"
+          class="icone-lista-vazia"
+        />
+        Sua lista está vazia, selecione os ingredientes que você deseja usar na
+        sua receita.
+      </p>
     </section>
   </main>
 </template>
