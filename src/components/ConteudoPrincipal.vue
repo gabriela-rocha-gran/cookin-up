@@ -1,4 +1,6 @@
 <script lang="ts">
+import SelecionarIngredientes from "./SelecionarIngredientes.vue";
+
 export default {
   data() {
     return {
@@ -13,6 +15,9 @@ export default {
         "Cebola",
       ],
     };
+  },
+  components: {
+    SelecionarIngredientes,
   },
 };
 </script>
@@ -42,6 +47,8 @@ export default {
         sua receita.
       </p>
     </section>
+
+    <SelecionarIngredientes />
   </main>
 </template>
 
