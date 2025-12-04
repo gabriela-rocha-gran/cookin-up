@@ -1,10 +1,14 @@
 <script lang="ts">
 import type ICategoria from "@/intefaces/ICategoria";
 import type { PropType } from "vue";
+import Tag from "./Tag.vue";
 
 export default {
   props: {
     categoria: { type: Object as PropType<ICategoria>, required: true },
+  },
+  components: {
+    Tag,
   },
 };
 </script>
@@ -19,7 +23,7 @@ export default {
 
         <ul class="categoria__ingredientes">
             <li v-for="ingrediente in categoria.ingredientes" :key="ingrediente">
-                {{ ingrediente }}
+                <Tag :texto="ingrediente" />
 
             </li>
         </ul>
