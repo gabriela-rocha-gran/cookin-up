@@ -28,8 +28,8 @@ export default {
             <li v-for="ingrediente in categoria.ingredientes" :key="ingrediente">
                <IngredienteSelecionavel 
                :ingrediente="ingrediente" 
-               @adicionarIngrediente="$emit('adicionarIngrediente', $event)" 
-               @removerIngrediente="$emit('removerIngrediente', $event)"
+               @adicionar-ingrediente="$emit('adicionarIngrediente', $event)" 
+               @remover-ingrediente="$emit('removerIngrediente', $event)"
             />
 
             </li>
