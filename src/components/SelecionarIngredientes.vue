@@ -5,6 +5,7 @@ import CardCategoria from "./CardCategoria.vue";
 import BotaoPrincipal from "./BotaoPrincipal.vue";
 
 export default {
+  name: 'SelecionarIngredientes',
   data() {
     //categorias dentro de data são estados
     return {
