@@ -12,7 +12,7 @@ export default {
     Tag,
     IngredienteSelecionavel,
   },  
-  emits: ['adicionarIngrediente'],
+  emits: ['adicionarIngrediente', 'removerIngrediente'],
 };
 </script>
 
@@ -29,6 +29,7 @@ export default {
                <IngredienteSelecionavel 
                :ingrediente="ingrediente" 
                @adicionarIngrediente="$emit('adicionarIngrediente', $event)" 
+               @removerIngrediente="$emit('removerIngrediente', $event)"
             />
 
             </li>
